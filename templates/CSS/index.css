@@ -1,0 +1,112 @@
+/* Cores principais */
+:root {
+    --cor-primaria: #1a243f; /* Azul escuro */
+    --cor-secundaria: #f0f6fc; /* Branco */
+    --cor-accento: #6f42c1; /* Roxo */
+    --cor-detalhe: #007bff; /* Azul claro */
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: var(--cor-accento);
+}
+
+a {
+    color: var(--cor-detalhe);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-accento);
+}
+
+/* Barra de navegação */
+.top-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.top-bar a {
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: rgba(26, 36, 63, 0.7); /* Cor de fundo ajustada */
+}
+
+.top-bar a:hover {
+    background-color: rgba(26, 36, 63, 1); /* Cor de fundo ajustada */
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos específicos para a seção de contato */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os links */
+}
+
+/* Efeito de brilho nas seções */
+.section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-bar a {
+        margin: 5px 0;
+    }
+}
